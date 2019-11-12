@@ -1,0 +1,133 @@
+<gpx xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="SkyDreamSoft">
+	<metadata>
+		<name>07/11/2019 LFBI (09:32) LFBI (11:34)</name>
+		<author>
+			<name>SkyDreamSoft</name>
+		</author>
+		<time>2019-11-09T09:14:17.473Z</time>
+	</metadata>
+	<trk>
+		<trkseg>
+			<trkpt lat="46.58634900" lon="0.30904200">
+				<ele>63.6000</ele>
+				<time>2019-11-07T08:44:06Z</time>
+				<desc>Vitesse : 0 kts
+Altitude : 209 ft
+Latitude : 46.586349
+Longitude : 0.309042
+Cap : 314°
+</desc>
+			</trkpt>
+			<trkpt lat="46.58653100" lon="0.30869000">
+				<ele>64.8000</ele>
+				<time>2019-11-07T08:44:55Z</time>
+				<desc>Vitesse : 11 kts
+Altitude : 213 ft
+Latitude : 46.586531
+Longitude : 0.308690
+Cap : 307°
+</desc>
+			</trkpt>
+			<trkpt lat="46.58672800" lon="0.30831700">
+				<ele>64.9000</ele>
+				<time>2019-11-07T08:45:01Z</time>
+				<desc>Vitesse : 12 kts
+Altitude : 213 ft
+Latitude : 46.586728
+Longitude : 0.308317
+Cap : 306°
+</desc>
+			</trkpt>
+			<trkpt lat="46.58690100" lon="0.30796600">
+				<ele>64.8000</ele>
+				<time>2019-11-07T08:45:06Z</time>
+				<desc>Vitesse : 13 kts
+Altitude : 213 ft
+Latitude : 46.586901
+Longitude : 0.307966
+Cap : 306°
+</desc>
+			</trkpt>
+			<trkpt lat="46.58707000" lon="0.30761000">
+				<ele>64.9000</ele>
+				<time>2019-11-07T08:45:11Z</time>
+				<desc>Vitesse : 13 kts
+Altitude : 213 ft
+Latitude : 46.587070
+Longitude : 0.307610
+Cap : 305°
+</desc>
+			</trkpt>
+			<trkpt lat="46.58721400" lon="0.30727800">
+				<ele>64.8000</ele>
+				<time>2019-11-07T08:45:16Z</time>
+				<desc>Vitesse : 10 kts
+Altitude : 213 ft
+Latitude : 46.587214
+Longitude : 0.307278
+Cap : 295°
+</desc>
+			</trkpt>
+			<trkpt lat="46.58726700" lon="0.30685700">
+				<ele>65.2000</ele>
+				<time>2019-11-07T08:45:24Z</time>
+				<desc>Vitesse : 6 kts
+Altitude : 214 ft
+Latitude : 46.587267
+Longitude : 0.306857
+Cap : 280°
+</desc>
+			</trkpt>
+			<trkpt lat="46.58708800" lon="0.30653900">
+				<ele>69.7000</ele>
+				<time>2019-11-07T08:46:02Z</time>
+				<desc>Vitesse : 13 kts
+Altitude : 229 ft
+Latitude : 46.587088
+Longitude : 0.306539
+Cap : 210°
+</desc>
+			</trkpt>
+			<trkpt lat="46.58228500" lon="0.30233400">
+				<ele>116.2000</ele>
+				<time>2019-11-07T08:46:30Z</time>
+				<desc>Vitesse : 51 kts
+Altitude : 381 ft
+Latitude : 46.582285
+Longitude : 0.302334
+Cap : 213°
+</desc>
+			</trkpt>
+			<trkpt lat="46.57949100" lon="0.29973700">
+				<ele>163.7000</ele>
+				<time>2019-11-07T08:46:45Z</time>
+				<desc>Vitesse : 48 kts
+Altitude : 537 ft
+Latitude : 46.579491
+Longitude : 0.299737
+Cap : 212°
+</desc>
+			</trkpt>
+			<trkpt lat="46.57819300" lon="0.29842500">
+				<ele>180.7000</ele>
+				<time>2019-11-07T08:46:52Z</time>
+				<desc>Vitesse : 48 kts
+Altitude : 593 ft
+Latitude : 46.578193
+Longitude : 0.298425
+Cap : 218°
+</desc>
+			</trkpt>
+			<trkpt lat="46.57518900" lon="0.29471300">
+				<ele>227.7000</ele>
+				<time>2019-11-07T08:47:10Z</time>
+				<desc>Vitesse : 47 kts
+Altitude : 747 ft
+Latitude : 46.575189
+Longitude : 0.294713
+Cap : 223°
+</desc>
+			</trkpt>
+		</trkseg>
+	</trk>
+</gpx>
