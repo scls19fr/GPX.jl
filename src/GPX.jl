@@ -335,7 +335,7 @@ function _parse_gpx(xdoc::XMLDocument)
                                     ele = parse(Float64, s)
                                 elseif name(x_track_point) == "desc"
                                     desc = content(x_track_point)
-                                    desc = ""  # for debug
+                                    # desc = ""  # for debug
                                 end
                             end
                             point = GPXPoint(lat, lon, ele, dt, desc)
