@@ -329,9 +329,7 @@ function _parse_gpx(xdoc::XMLDocument)
                             for x_track_point in child_elements(x_track_segment)
                                 if name(x_track_point) == "time"
                                     s = content(x_track_point)
-                                    fmt = dateformat"yyyy-mm-ddTHH:MM:SSzzz"
-                                    s = replace(s, "Z" => "+00:00")  # bug https://github.com/JuliaTime/TimeZones.jl/pull/227
-                                    dt = parse(ZonedDateTime, s, fmt)
+                                    dt = parse(ZonedDateTime, s, dateformat"yyyy-mm-ddTHH:MM:SSzzz")
                                 elseif name(x_track_point) == "ele"
                                     s = content(x_track_point)
                                     ele = parse(Float64, s)
