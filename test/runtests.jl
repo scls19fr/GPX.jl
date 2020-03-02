@@ -4,16 +4,18 @@ using GPX
 
 @testset "Sample" begin
     @testset "write_gpx" begin
-        include("../sample/write_gpx.jl")
+		include("../sample/write_gpx.jl")
+		@test 1 == 1
     end
 
-    #@testset "read_gpx" begin
-    #    include("../sample/read_gpx.jl")
-    #end
+    @testset "read_gpx" begin
+		include("../sample/read_gpx.jl")
+		@test 1 == 1
+    end
 
 end
 
-@testset "read gpx" begin
+@testset "parse gpx" begin
     s = """<gpx xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="GPX.jl">
 	<metadata>
 		<name>07/11/2019 LFBI (09:32) LFBI (11:34)</name>
