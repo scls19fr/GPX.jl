@@ -8,6 +8,7 @@ module GPX
 using LightXML
 using Dates
 using TimeZones
+using FileIO
 
 import Base: push!, iterate, length, getindex
 
@@ -284,6 +285,9 @@ function read_gpx_file(fname)
     xdoc = parse_file(fname)
     return _parse_gpx(xdoc)
 end
+
+load(f::File{format"GPX"}) = read_gpx_file(filename(f))
+
 
 """
     parse_gpx_string(s) -> GPXDocument
