@@ -38,7 +38,7 @@ Cap : 314°
 			</trkpt>
 			<trkpt lat="46.58653100" lon="0.30869000">
 				<ele>64.8000</ele>
-				<time>2019-11-07T08:44:55Z</time>
+				<time>2019-11-07T08:44:55.000Z</time>
 				<desc>Vitesse : 11 kts
 Altitude : 213 ft
 Latitude : 46.586531
