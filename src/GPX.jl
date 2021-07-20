@@ -8,10 +8,11 @@ module GPX
 using LightXML
 using Dates
 using TimeZones
+using FileIO
 
 import Base: push!, iterate, length, getindex
 
-export GPXAuthor, GPXMetadata, GPXPoint, 
+export GPXAuthor, GPXMetadata, GPXPoint,
     GPXTrackSegment, GPXDocument, GPXRoute
 export read_gpx_file, parse_gpx_string
 export new_track, new_track_segment, last_segment
@@ -45,7 +46,7 @@ The person or organization who created the GPX file.
 struct GPXAuthor
     name::String
     email::String
-	link::String
+    link::String
 end
 function GPXAuthor(name; email="", link="")
     GPXAuthor(name, email, link)
@@ -150,7 +151,7 @@ end
     GPXDocument(metadata::GPXMetadata; tracks=GPXTracks(), namespaces=GPX_NS, version=GPX_VERSION, creator=GPX_CREATOR)
 
 GPX documents contain a metadata header, followed by waypoints, routes, and tracks.
-You can add your own elements to the extensions section of the GPX document.    
+You can add your own elements to the extensions section of the GPX document.
 """
 struct GPXDocument
     namespaces::Dict{String, String}
@@ -159,8 +160,8 @@ struct GPXDocument
     creator::String
     metadata::GPXMetadata
 
-	waypoints::Vector{GPXPoint}
-	routes::Vector{GPXRoute}
+    waypoints::Vector{GPXPoint}
+    routes::Vector{GPXRoute}
     tracks::GPXTracks
 
     function GPXDocument(metadata::GPXMetadata; tracks=GPXTracks(), namespaces=GPX_NS, version=GPX_VERSION, creator=GPX_CREATOR)
@@ -173,7 +174,7 @@ end
 """
     new_track(gpx::GPXDocument) -> GPXTrack
 
-Get a new track from a `GPXDocument`.  
+Get a new track from a `GPXDocument`.
 """
 function new_track(gpx::GPXDocument)
     return new_track(gpx.tracks)
@@ -212,7 +213,7 @@ end
 
 """
     last_segment(gpx) -> GPXTrackSegment
-    
+
 
 """
 function last_segment(gpx::GPXDocument)
@@ -239,14 +240,14 @@ function LightXML.XMLDocument(gpx::GPXDocument)
     end
     set_attribute(xroot, "version", gpx.version)
     set_attribute(xroot, "creator", gpx.creator)
-    
+
     x_metadata = new_child(xroot, "metadata")
     x_metadata_name = new_child(x_metadata, "name")
     add_text(x_metadata_name, gpx.metadata.name)
     x_metadata_author = new_child(x_metadata, "author")
     x_metadata_author_name = new_child(x_metadata_author, "name")
     add_text(x_metadata_author_name, gpx.metadata.author.name)
-    
+
     for track in gpx.tracks
         x_trk = new_child(xroot, "trk")
         for segment in track.segments
@@ -271,7 +272,7 @@ function LightXML.XMLDocument(gpx::GPXDocument)
             end
         end
     end
-    
+
     return xdoc
 end
 
@@ -284,6 +285,9 @@ function read_gpx_file(fname)
     xdoc = parse_file(fname)
     return _parse_gpx(xdoc)
 end
+
+load(f::File{format"GPX"}) = read_gpx_file(filename(f))
+
 
 """
     parse_gpx_string(s) -> GPXDocument
@@ -311,7 +315,7 @@ function _parse_gpx(xdoc::XMLDocument)
     )
 
     tracks = GPXTracks()
-    
+
     for x_gpx in child_elements(gpxs)
         if name(x_gpx) == "trk"
             track = new_track(tracks)
